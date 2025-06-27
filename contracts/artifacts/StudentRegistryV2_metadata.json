@@ -16,39 +16,49 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "from",
+						"name": "user",
 						"type": "address"
 					},
 					{
 						"indexed": false,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
 					},
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "age",
 						"type": "uint256"
 					}
 				],
-				"name": "Sent",
+				"name": "Registered",
 				"type": "event"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "user",
 						"type": "address"
 					}
 				],
-				"name": "balances",
+				"name": "getStudent",
 				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -58,28 +68,16 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "user",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
 					}
 				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "minter",
+				"name": "isStudentRegistered",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "bool",
 						"name": "",
-						"type": "address"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -89,16 +87,21 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "studentAddress",
 						"type": "address"
 					},
 					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "age",
 						"type": "uint256"
 					}
 				],
-				"name": "send",
+				"name": "register",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -117,7 +120,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"firstcoint.sol": "firstcoin"
+			"contracts/StudentRegistryV2.sol": "StudentRegistryV2"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -131,12 +134,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"firstcoint.sol": {
-			"keccak256": "0xc9910a68b2bcc706c637e290c4c1274a28b042e14d56bc2a533bc556e5d5e337",
-			"license": "MIT",
+		"contracts/StudentRegistryV2.sol": {
+			"keccak256": "0xbbb9cbe025863e95720c428574718f9d921e640cc88274e7d9077148df7abfe6",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d57aa92147e811d4788cf1bdab81e5b4695516cd8b84457b67c0152733f19c97",
-				"dweb:/ipfs/QmNmqpqauYF19DQqFDzueD3WtN4Atrv97LG9z65bJzGWQX"
+				"bzz-raw://1e14089a4cd4ec49a6681e89e0fe0f0028d03d3aed26f27d786d6ad8ca99da77",
+				"dweb:/ipfs/QmQEbmagZbmfV5qtqGpFGkjKzNiehbfCkS2DV32ctKJyL7"
 			]
 		}
 	},

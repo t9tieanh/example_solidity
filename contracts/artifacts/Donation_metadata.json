@@ -11,70 +11,76 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "_message",
+						"type": "string"
 					}
 				],
-				"name": "Sent",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balances",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
+				"name": "donate",
+				"outputs": [],
+				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [
 					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "donors",
+				"outputs": [
+					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "sender",
 						"type": "address"
 					},
 					{
 						"internalType": "uint256",
 						"name": "amount",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
 					}
 				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "minter",
+				"name": "getBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getTotalDonors",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -86,19 +92,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "send",
+				"inputs": [],
+				"name": "withdrawAll",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -117,7 +112,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"firstcoint.sol": "firstcoin"
+			"contracts/Donate.sol": "Donation"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -131,12 +126,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"firstcoint.sol": {
-			"keccak256": "0xc9910a68b2bcc706c637e290c4c1274a28b042e14d56bc2a533bc556e5d5e337",
+		"contracts/Donate.sol": {
+			"keccak256": "0x2fb42f713d5c1e80521949efc53324ad9ba0ab96d7a42deeff7673faedb4ffea",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://d57aa92147e811d4788cf1bdab81e5b4695516cd8b84457b67c0152733f19c97",
-				"dweb:/ipfs/QmNmqpqauYF19DQqFDzueD3WtN4Atrv97LG9z65bJzGWQX"
+				"bzz-raw://bbd130f1df2e88510a2aefc3ba17d05b7a5b788704c8cf161a8594275da814d1",
+				"dweb:/ipfs/QmYMUKsJX3yYb5jpGfei3kcSrKcYLzcnbYBCdXg63EMEBE"
 			]
 		}
 	},

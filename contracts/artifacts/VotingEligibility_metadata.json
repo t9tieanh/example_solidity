@@ -11,70 +11,40 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
 					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "age",
 						"type": "uint256"
 					}
 				],
-				"name": "Sent",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balances",
+				"name": "checkEligibility",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "bool",
 						"name": "",
-						"type": "uint256"
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "minter",
+				"name": "minAge",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -88,17 +58,12 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "receiver",
-						"type": "address"
-					},
-					{
 						"internalType": "uint256",
-						"name": "amount",
+						"name": "newMinAge",
 						"type": "uint256"
 					}
 				],
-				"name": "send",
+				"name": "updateMinAge",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -117,7 +82,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"firstcoint.sol": "firstcoin"
+			"contracts/VotingEligibility.sol": "VotingEligibility"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -131,12 +96,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"firstcoint.sol": {
-			"keccak256": "0xc9910a68b2bcc706c637e290c4c1274a28b042e14d56bc2a533bc556e5d5e337",
-			"license": "MIT",
+		"contracts/VotingEligibility.sol": {
+			"keccak256": "0xf5299baa90c02ad243e7da471a4b97aa3ebbf1701a4f29001bcadef69195e7f2",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d57aa92147e811d4788cf1bdab81e5b4695516cd8b84457b67c0152733f19c97",
-				"dweb:/ipfs/QmNmqpqauYF19DQqFDzueD3WtN4Atrv97LG9z65bJzGWQX"
+				"bzz-raw://0648968ab55f3b51d73e1209d5bdd3a75269e97070646560bc074f78cec0034c",
+				"dweb:/ipfs/QmS8krzWofv9XmBQEChLSSXGSfYGChFnoaFbUcEP7kiawj"
 			]
 		}
 	},

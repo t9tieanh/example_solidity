@@ -16,70 +16,51 @@
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "from",
+						"name": "voter",
 						"type": "address"
 					},
 					{
 						"indexed": false,
 						"internalType": "address",
-						"name": "to",
+						"name": "candidateId",
 						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
 					}
 				],
-				"name": "Sent",
+				"name": "Voted",
 				"type": "event"
 			},
 			{
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "balances",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "receiver",
+						"name": "candidateAddress",
 						"type": "address"
 					},
 					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
 					}
 				],
-				"name": "mint",
+				"name": "addCandidate",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "minter",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "candidateAddress",
 						"type": "address"
+					}
+				],
+				"name": "getVoteCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -89,16 +70,11 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "receiver",
+						"name": "candidateAddress",
 						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
 					}
 				],
-				"name": "send",
+				"name": "vote",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -117,7 +93,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"firstcoint.sol": "firstcoin"
+			"contracts/Voting.sol": "Voting"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -131,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"firstcoint.sol": {
-			"keccak256": "0xc9910a68b2bcc706c637e290c4c1274a28b042e14d56bc2a533bc556e5d5e337",
-			"license": "MIT",
+		"contracts/Voting.sol": {
+			"keccak256": "0x85aa111d1990738d94640638f6cffd82337ec893c57ec82ac849e7b5ba2a0386",
+			"license": "GPL-3.0",
 			"urls": [
-				"bzz-raw://d57aa92147e811d4788cf1bdab81e5b4695516cd8b84457b67c0152733f19c97",
-				"dweb:/ipfs/QmNmqpqauYF19DQqFDzueD3WtN4Atrv97LG9z65bJzGWQX"
+				"bzz-raw://9186d350a75eb50ef35c218b589ddcc99637fc38435c32ff171bae80241dae8c",
+				"dweb:/ipfs/QmbuRK92FQqZa4xs34vZjZj5puJyica1mXv9uZ7KAr2qds"
 			]
 		}
 	},
