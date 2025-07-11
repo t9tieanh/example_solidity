@@ -1,19 +1,11 @@
-
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+pragma solidity ^0.8.20;
 
-contract MyNFT is ERC721 {
-    uint public nextTokenId;
-    address public admin;
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
-    constructor() ERC721("MyNFT", "MNFT") {
-        admin = msg.sender;
-    }
-
-    function mint(address to) external {
-        require(msg.sender == admin, "only admin");
-        _safeMint(to, nextTokenId);
-        nextTokenId++;
+contract MyToken is ERC20 {
+    constructor() ERC20("MyToken", "MTK") {
+        // Mint 1,000,000 token (đơn vị nhỏ nhất, decimals = 18)
+        _mint(msg.sender, 1000000 * 10 ** decimals());
     }
 }
